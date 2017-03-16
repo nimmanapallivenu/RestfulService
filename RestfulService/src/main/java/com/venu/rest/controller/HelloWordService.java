@@ -1,4 +1,4 @@
-package com.aspire.rest.controller;
+package com.venu.rest.controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,4 +14,12 @@ public class HelloWordService {
 		String returnMessage = "Jersey Say :" + message;
 		return Response.status(200).entity(returnMessage).build();
 	}
+	
+	
+	@GET
+	public Response getMessage() {
+		String returnMessage = "Jersey Say :";
+		return Response.status(200).entity(returnMessage).build();
+	}
+	
 }

@@ -1,4 +1,4 @@
-package com.aspire.rest.controller;
+package com.venu.rest.controller;
 
 import java.util.List;
 
@@ -14,6 +14,7 @@ import javax.ws.rs.core.UriInfo;
 @Path("/user")
 public class UserService {
 
+	// user/1
 	@GET
 	public Response getUser() {
 		return Response.status(200).entity("getUser service called").build();
@@ -35,21 +36,21 @@ public class UserService {
 	@Path("{year}/{month}/{date}")
 	public Response getUserHistory(@PathParam("year") String year, @PathParam("month") String month,
 			@PathParam("date") String date) {
-
+		// user/2017/02/09
 		return Response.status(200).entity("UserHistory Service called").build();
 	}
 
 	@GET
 	@Path("/query1")
 	public Response getUsers(@QueryParam("from") String from, @QueryParam("to") String to) {
-
+		//user?form=5879867&to=0986098596
 		return Response.status(200).entity("getUser Service called with Query param").build();
 	}
 
 	@GET
 	@Path("/query2")
 	public Response getUsers(@Context UriInfo info) {
-
+		//user?form=5879867&to=0986098596
 		String from = info.getQueryParameters().getFirst("from1");
 		String to = info.getQueryParameters().getFirst("to1");
 		List<String> orderBy = info.getQueryParameters().get("orderBy");
