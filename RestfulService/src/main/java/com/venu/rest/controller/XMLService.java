@@ -15,13 +15,11 @@ public class XMLService {
 	@Path("/{pin}")
 	@Produces(MediaType.APPLICATION_XML)
 	public Customer getCustomerInXML(@PathParam("pin") int pin) {
-
 		Customer customer = new Customer();
 		customer.setName("mkyong");
 		customer.setPin(pin);
 		customer.setAge("12");
 		return customer;
-
 	}
 
 }
