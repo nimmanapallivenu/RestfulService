@@ -22,4 +22,12 @@ public class HelloWordService {
 		return Response.status(200).entity(returnMessage).build();
 	}
 	
+	
+	
+	@GET
+	@Path("/welcome")
+	public Response welcome() {
+		String returnMessage = "Jersey Say :";
+		return Response.status(200).entity(returnMessage).build();
+	}
 }
