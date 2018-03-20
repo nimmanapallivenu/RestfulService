@@ -9,7 +9,7 @@ package com.venu.rest.dto;
 public class CustomerUtil {
 
 	public static void main(String[] args) {
-		
+		System.out.println("hello main method");
 		
 	}
 }
